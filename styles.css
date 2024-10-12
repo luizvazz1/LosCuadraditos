@@ -14,11 +14,13 @@ body {
     gap: 120px; */
     margin-bottom: 80px;
 }
-
+.header{
+    margin-bottom: 120px;
+}
 .header .logo {
     width: 337px;
     height: 195px;
-    margin-bottom: 120px;
+    color:#3D4DB7 ;
 }
 
 .buttons {
@@ -34,7 +36,7 @@ body {
     padding: 15px 45px;
     margin: 10px ;
     border-radius: 25px;
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -57,4 +59,38 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+/* Media Query para telas menores (tablets e smartphones) */
+@media (max-width: 800px) {
+    .header{
+        margin-bottom: 60px;
+    }
+    .header .logo {
+        width: 250px;
+        height: auto; /* Ajusta a altura proporcionalmente */
+    }
+
+    .button {
+        padding: 10px 40px;
+        font-size: 1em;
+        max-width: 180px;
+    }
+    .footer{
+        background-size: auto;
+        height: 120px;
+    }
+}
+
+/* Media Query para telas bem pequenas (smartphones) */
+@media (max-width: 480px) {
+    .header .logo {
+        width: 200px;
+        height: auto;
+    }
+
+    .button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+        max-width: 150px;
+    }
 }
