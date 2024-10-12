@@ -1,0 +1,60 @@
+body {
+    background-color: #E8A2C8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    /* display: grid;
+    gap: 120px; */
+    margin-bottom: 80px;
+}
+
+.header .logo {
+    width: 337px;
+    height: 195px;
+    margin-bottom: 120px;
+}
+
+.buttons {
+    /* margin-top: 20px; */
+    margin-bottom: 110px;
+}
+
+.button {
+    display: block;
+    background-color: #F1EBDA;
+    color: #3D4DB7;
+    text-decoration: none;
+    padding: 15px 45px;
+    margin: 10px ;
+    border-radius: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: #3D4DB7;
+    color: #fff;
+}
+
+/* .ifood {
+    background-color: #3D4DB7;
+    color: #fff;
+} */
+
+.footer {
+    background-image: url(./img/Frame\ 1.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
