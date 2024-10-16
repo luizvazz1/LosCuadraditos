@@ -20,6 +20,7 @@ body {
     display: flex;
     align-items: center;
     z-index: 1000;
+    /* padding-left: 10px; */
 }
 .status-indicator {
     padding: 15px 20px;
@@ -37,27 +38,31 @@ body {
 .status-closed {
     background-color: red;
 }
-.announcement-wrapper {
-    display: flex;
-    overflow: hidden;
-    width: 0%; /* Ajuste conforme necessário */
-}
 
 .announcement-text {
-    display: inline-block;
-    white-space: nowrap;
-    padding-left: 100%;
-    animation: slide 30s linear infinite;
+    /* opacity: 1;
+    transition: opacity 1s ease; Suavidade para a transição de opacidade */
+    margin-left: 16px;
+    animation: opacidade 8s infinite ;
+
 }
 
-@keyframes slide {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+@keyframes opacidade {
+
+   0%{
+    margin-left: 1400px;
+    opacity: 0;
 }
+30%{
+    opacity: 0;
+}
+   100%{
+     opacity: 1;
+  margin-left: 16px;
+}
+    
+}
+
 .container {
     text-align: center;
     /* display: grid;
@@ -144,4 +149,27 @@ body {
         font-size: 0.9em;
         max-width: 150px;
     }
+}
+/* Especificamente para MacBook Air de 13 polegadas */
+@media screen and (min-width: 1280px) and (max-width: 1440px) and (min-height: 800px) and (max-height: 900px) {
+    /* Personalize o estilo aqui */
+    
+    .announcement-bar {
+        background-color: #007bff; /* Muda a cor da barra de anúncio para azul */
+        font-size: 14px; /* Ajusta o tamanho do texto para telas menores */
+    }
+    .header{
+        margin-bottom: 60px;
+    }
+    .header .logo {
+        width: 250px;
+        height: auto; /* Ajusta a altura proporcionalmente */
+    }
+
+    .footer{
+        background-size: auto;
+        height: 160px;
+    }
+
+    /* Você pode definir quaisquer outros ajustes, como padding, margens, etc. */
 }
