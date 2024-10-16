@@ -8,7 +8,56 @@ body {
     margin: 0;
     overflow: hidden;
 }
+.announcement-bar {
+    background-color: #D7FF7A;
+    color: #3C3CD6;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+.status-indicator {
+    padding: 15px 20px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 0px;
+    margin-right: 0px;
+    z-index: 1001;
+}
 
+.status-open {
+    background-color: green;
+}
+
+.status-closed {
+    background-color: red;
+}
+.announcement-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 0%; /* Ajuste conforme necessário */
+}
+
+.announcement-text {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: slide 30s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 .container {
     text-align: center;
     /* display: grid;
