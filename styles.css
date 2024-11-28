@@ -20,6 +20,8 @@ body {
     display: flex;
     align-items: center;
     z-index: 1000;
+    display: grid;
+    grid-template-columns:  1fr 10fr;
     /* padding-left: 10px; */
 }
 .status-indicator {
@@ -29,6 +31,9 @@ body {
     border-radius: 0px;
     margin-right: 0px;
     z-index: 1001;
+    align-self: stretch;
+    text-align: center;
+   
 }
 
 .status-open {
@@ -65,17 +70,19 @@ body {
 
 .container {
     text-align: center;
-    /* display: grid;
-    gap: 120px; */
+    display: grid;
+    
     margin-bottom: 80px;
 }
 .header{
-    margin-bottom: 120px;
+    margin-top: 40px;
+    margin-bottom: 80px;
 }
 .header .logo {
     width: 337px;
     height: 195px;
     color:#3D4DB7 ;
+    align-self: center;
 }
 
 .buttons {
@@ -135,6 +142,38 @@ body {
         background-size: auto;
         height: 120px;
     }
+    .announcement-bar {
+        background-color: #D7FF7A; /* Muda a cor da barra de anúncio para azul */
+        font-size: 12px; /* Ajusta o tamanho do texto para telas menores */
+        height: 80px;
+    }
+    .announcement-text {
+        /* opacity: 1;
+        transition: opacity 1s ease; Suavidade para a transição de opacidade */
+        margin-left: 16px;
+        animation: opacidade 2s infinite ;
+    
+    }
+    
+    @keyframes opacidade {
+    
+       0%{
+        
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+       100%{
+         opacity: 1;
+     
+    }
+        
+}
+.status-indicator {
+    padding: 20px 25px;
+   
+}
 }
 
 /* Media Query para telas bem pequenas (smartphones) */
@@ -149,16 +188,56 @@ body {
         font-size: 0.9em;
         max-width: 150px;
     }
+    .announcement-bar {
+        background-color: #D7FF7A; /* Muda a cor da barra de anúncio para azul */
+        font-size: 8px; /* Ajusta o tamanho do texto para telas menores */
+        height: 80px;
+    }
+    .announcement-bar {
+        background-color: #D7FF7A; /* Muda a cor da barra de anúncio para azul */
+        font-size: 11px; /* Ajusta o tamanho do texto para telas menores */
+        height: 80px;
+    }
+    .announcement-text {
+        /* opacity: 1;
+        transition: opacity 1s ease; Suavidade para a transição de opacidade */
+        margin-left: 16px;
+        animation: opacidade 2s infinite ;
+    
+    }
+    
+    @keyframes opacidade {
+    
+       0%{
+        
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+       100%{
+         opacity: 1;
+     
+    }
+        
+}
+.status-indicator {
+    padding: 20px 25px;
+}
 }
 /* Especificamente para MacBook Air de 13 polegadas */
-@media screen and (min-width: 1280px) and (max-width: 1440px) and (min-height: 800px) and (max-height: 900px) {
+@media (min-height:500px) and (max-height: 800px) {
     /* Personalize o estilo aqui */
-    
+    .buttons {
+        /* margin-top: 20px; */
+        margin-bottom: 60px;
+    }
     .announcement-bar {
-        background-color: #007bff; /* Muda a cor da barra de anúncio para azul */
+        background-color: #D7FF7A; /* Muda a cor da barra de anúncio para azul */
         font-size: 14px; /* Ajusta o tamanho do texto para telas menores */
     }
     .header{
+        margin-top: 40px;
         margin-bottom: 60px;
     }
     .header .logo {
@@ -168,7 +247,7 @@ body {
 
     .footer{
         background-size: auto;
-        height: 160px;
+        height: 80px;
     }
 
     /* Você pode definir quaisquer outros ajustes, como padding, margens, etc. */
